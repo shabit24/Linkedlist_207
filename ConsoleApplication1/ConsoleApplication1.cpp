@@ -161,4 +161,6 @@ bool searchNode(int nim, Node* current, Node* previous) {
 					}
 
 
-
+		int nim;
+		cout << "Masukkan NIM: ";
+		cin >> nim;

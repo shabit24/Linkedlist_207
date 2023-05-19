@@ -96,13 +96,6 @@ bool searchNode(int nim, Node* current, Node* previous) {
 				return false;
 	}
 		
-	bool listEmpty() {
-		if (START == NULL)
-			return true;
-		else
-			return false;
-
-	}
 
 	void traverse() {
 		if (listEmpty()) {
@@ -112,6 +105,27 @@ bool searchNode(int nim, Node* current, Node* previous) {
 			return;
 		}
 
+
+		else {
+			Node* currentNode = START;
+			while (currentNode != NULL) {
+				{
+					cout << "NIM: " << currentNode->noMhs << ", Nama: " << currentNode->name << endl;
+
+				}
+				currentNode = currentNode->next;
+			}
+		}
+	}
+
+
+	void searchData()
+		if (listEmpty()) {
+			cout << "List Kosong" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
 		else {
 			int nim;
 			cout << "Masukkan NIM: ";

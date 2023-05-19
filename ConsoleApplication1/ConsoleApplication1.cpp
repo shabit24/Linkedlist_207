@@ -152,8 +152,13 @@ bool searchNode(int nim, Node* current, Node* previous) {
 					break;
 
 				case 2:
-					if(listEmpty())
+					if (listEmpty())
 					{
 						cout << "list kosong" << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+
 
 

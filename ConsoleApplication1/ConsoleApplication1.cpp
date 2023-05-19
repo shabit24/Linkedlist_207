@@ -133,7 +133,7 @@ bool searchNode(int nim, Node* current, Node* previous) {
 	
 	int main() {
 		int pilihan;
-		do{
+		do {
 			try
 			{
 				cout << "1. Tambah Data" << endl;
@@ -143,7 +143,7 @@ bool searchNode(int nim, Node* current, Node* previous) {
 				cout << "5. Keluar Data" << endl;
 				cout << "Pilihan: ";
 				cin >> pilihan;
-				switch(pilihan)
+				switch (pilihan)
 				{
 				case 1:addNode();
 					cout << "Data Berhasil Ditambahkan" << endl;
@@ -161,6 +161,31 @@ bool searchNode(int nim, Node* current, Node* previous) {
 					}
 
 
-		int nim;
-		cout << "Masukkan NIM: ";
-		cin >> nim;
+					int nim;
+					cout << "Masukkan NIM: ";
+					cin >> nim;
+					if (deleteNode(nim)) {
+						cout << "NIM: " << nim << "berhasil dihapus" << endl;
+						system("pause");
+						system("cls");
+					}
+					else
+						cout << "Data tida ditemulkan" << endl;
+					break;
+				case 3:
+					traverse();
+					break;
+				case 4:searchData();
+					break;
+
+				case 5:
+					break;
+				default:
+					cout << "pilihan tida ada" << endl;
+					break;
+				}
+			}
+			catch (exception e) {
+				cout << "Terjadi kesalahan" << endl;
+			}
+		} while (pilihan != 5);

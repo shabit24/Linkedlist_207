@@ -1,20 +1,91 @@
-// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+using namespace std;
 
-int main()
+struct Node
 {
-    std::cout << "Hello World!\n";
+	int noMhs;
+	string name;
+	Node* next;
+};
+
+Node* START = NULL;
+void addNote() {
+	int nim;
+	string nama;
+	Node* nodeBaru = new Node();
+	cout << "Masukan NIM : ";
+	cin >> nim;
+	cout << "Masukkan Nama: ";
+	cin >> nama;
+	nodeBaru->noMhs = nim;
+	nodeBaru->name = nama;
+
+	if (START == NULL || nim <= START->noMhs) {
+		cout << "NIM sudah ada" << endl;
+		return;
+
+	}
+
+	Node* current = START;
+	Node* previous = START;
+	
+	while ((current != NULL) && (nim >= current->noMhs))
+	{
+		if (nim == current->noMhs)
+		{
+			cout << "Nim sudah ada" << endl;
+			return;
+
+		}
+		previous = current;
+		current = current->next;
+	}
+	nodeBaru->next = current;
+	previous->next = nodeBaru;
 }
+bool searchNode(int nim, Node* current, Node* previous) {
+	previous = START;
+	current = START;
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+}
+while ((current != NULL) && (nim >= current->noMhs))
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	if ()
+
+	previous = current;
+	current = current->next;
+
+	bool deleteNode(int nim) {
+		Node* current = START;
+		Node* previous = START;
+		if (searchNode(nim, previous, current) == false)
+			return false;
+		previous->next = current->next;
+		if (current == START)
+			START = current->next;
+		return true;
+	}
+
+	bool listEmpty()
+	{
+		if (listEmpty())
+			if ((START = NULL))
+				return true;
+			else
+				return false;
+	}
+		
+		{
+			cout << "List Kosong" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+		else {
+			Node* currentNode = START;
+			while (currentNode != NULL)
+			{
+				cout<<"Nim: " currentNode->noMhs<<",Nama"
+			}
+
+		}

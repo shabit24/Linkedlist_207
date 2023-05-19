@@ -143,5 +143,17 @@ bool searchNode(int nim, Node* current, Node* previous) {
 				cout << "5. Keluar Data" << endl;
 				cout << "Pilihan: ";
 				cin >> pilihan;
+				switch(pilihan)
+				{
+				case 1:addNode();
+					cout << "Data Berhasil Ditambahkan" << endl;
+					system("pause");
+					system("cls");
+					break;
+
+				case 2:
+					if(listEmpty())
+					{
+						cout << "list kosong" << endl;
 
 
